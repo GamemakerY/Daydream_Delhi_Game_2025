@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8lt6t21qlohi"]
+[gd_scene load_steps=3 format=4 uid="uid://hteo22kjuqu8"]
 
-[ext_resource type="PackedScene" uid="uid://i4mywafiek0" path="res://Player.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://0jfoactb741r" path="res://Player.tscn" id="1_uu6xs"]
 [ext_resource type="TileSet" uid="uid://cn207tqrcosiu" path="res://assets/tileset.tres" id="2_uu6xs"]
 
 [node name="main" type="Node2D"]
@@ -11,6 +11,7 @@
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
 position = Vector2(0, 1)
+tile_map_data = PackedByteArray("AAD9/wEAAQACAAMAAAD+/wEAAQACAAMAAAD8/wEAAQAAAAMAAAD8/wAAAQAAAAAAAAD9/wAAAQABAAAAAAD+/wAAAQACAAAAAAD//wEAAQABAAMAAAD//wAAAQACAAAAAAAAAAEAAQABAAMAAAAAAAAAAQACAAAAAAABAAEAAQABAAMAAAABAAAAAQABAAAAAAACAAEAAQACAAMAAAACAAAAAQACAAAAAAADAAEAAQABAAMAAAADAAAAAQABAAAAAAAEAAEAAQABAAMAAAAEAAAAAQABAAAAAAAFAAEAAQACAAMAAAAFAAAAAQACAAAAAAAGAAEAAQADAAMAAAA=")
 tile_set = ExtResource("2_uu6xs")
 
 [node name="Camera2D" type="Camera2D" parent="."]

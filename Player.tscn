@@ -1,6 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://i4mywafiek0"]
+[gd_scene load_steps=34 format=3 uid="uid://0jfoactb741r"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://dbtnhd5jmptt5" path="res://player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dkqy8ml6bmlhd" path="res://assets/Knight/KnightAttack_strip.png" id="2_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bjmy3msqn1rff" path="res://assets/Knight/KnightDeath_strip.png" id="3_cxr5p"]
 [ext_resource type="Texture2D" uid="uid://e8tod72uutv5" path="res://assets/Knight/KnightJumpAndFall_strip.png" id="4_tdg3f"]
@@ -222,8 +222,7 @@ script = ExtResource("1_kpjcp")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_dtqjt")
 animation = &"idle"
-autoplay = "Attack"
-frame_progress = 0.87474465
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -14)
