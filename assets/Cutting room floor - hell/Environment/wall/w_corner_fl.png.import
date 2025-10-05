@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qfa5y0dvvmg3"
-path="res://.godot/imported/oak_woods_tileset.png-26bf3f81e7c3ef8c50c7b5087e8e4015.ctex"
+uid="uid://cy2xr11wqwuba"
+path="res://.godot/imported/w_corner_fl.png-b5258a065cf9121e737cba7a517bb542.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/oak_woods_v1.0/oak_woods_tileset.png"
-dest_files=["res://.godot/imported/oak_woods_tileset.png-26bf3f81e7c3ef8c50c7b5087e8e4015.ctex"]
+source_file="res://assets/Cutting room floor - hell/Environment/wall/w_corner_fl.png"
+dest_files=["res://.godot/imported/w_corner_fl.png-b5258a065cf9121e737cba7a517bb542.ctex"]
 
 [params]
 
