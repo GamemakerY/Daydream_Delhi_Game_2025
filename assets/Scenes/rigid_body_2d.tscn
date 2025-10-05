@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c21m0op8lvmxe"]
+
+[ext_resource type="Texture2D" uid="uid://r5pooyoutby7" path="res://assets/oak_woods_v1.0/character/Dragonred_img.png" id="1_p1303"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p1303")
+flip_h = true
