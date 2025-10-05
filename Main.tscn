@@ -1,9 +1,15 @@
-[gd_scene load_steps=13 format=4 uid="uid://hteo22kjuqu8"]
+[gd_scene load_steps=19 format=4 uid="uid://hteo22kjuqu8"]
 
 [ext_resource type="PackedScene" uid="uid://i4mywafiek0" path="res://Player.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://dnm6cveunm4un" path="res://Player2.tscn" id="2_r0du0"]
 [ext_resource type="TileSet" uid="uid://cn207tqrcosiu" path="res://assets/tileset.tres" id="2_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://brkok02j3mqlp" path="res://assets/Scenes/platforms.tscn" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://dy6qr0x4wfh8f" path="res://assets/oak_woods_v1.0/decorations/lamp.png" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://cq5871s5alpqs" path="res://assets/oak_woods_v1.0/decorations/shop_anim.png" id="5_wkp8b"]
+[ext_resource type="Texture2D" uid="uid://bhnxsyjhxpbr" path="res://assets/oak_woods_v1.0/decorations/rock_1.png" id="7_20pc6"]
+[ext_resource type="Texture2D" uid="uid://dufv368fouanf" path="res://assets/oak_woods_v1.0/decorations/rock_2.png" id="8_5vvyt"]
+[ext_resource type="Texture2D" uid="uid://f6wb1qctu02c" path="res://assets/oak_woods_v1.0/decorations/shop.png" id="9_c6i3y"]
+[ext_resource type="Texture2D" uid="uid://du8qfux5blxwm" path="res://assets/oak_woods_v1.0/decorations/sign.png" id="10_c2ibq"]
 
 [sub_resource type="Animation" id="Animation_cm0pq"]
 length = 0.001
@@ -160,12 +166,125 @@ libraries = {
 autoplay = "move_platform"
 
 [node name="Player" parent="TileMapLayer" instance=ExtResource("1_uu6xs")]
-position = Vector2(36, -1)
+position = Vector2(38, -2)
 
 [node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player"]
 position = Vector2(19, -13)
 zoom = Vector2(5, 5)
 
+[node name="Lamp" type="Sprite2D" parent="TileMapLayer"]
+position = Vector2(107.00001, -21.000002)
+scale = Vector2(0.8043478, 0.74561405)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp" type="Sprite2D" parent="TileMapLayer/Lamp"]
+position = Vector2(-647.7298, -26.823524)
+scale = Vector2(0.8043478, 0.74561405)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp2" type="Sprite2D" parent="TileMapLayer/Lamp"]
+position = Vector2(426.43246, -26.823528)
+scale = Vector2(0.8043478, 0.74561405)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp2" type="Sprite2D" parent="TileMapLayer/Lamp/Lamp2"]
+position = Vector2(599.7136, -50.36512)
+scale = Vector2(1.792967, 1.2937758)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp2" type="Sprite2D" parent="TileMapLayer/Lamp/Lamp2/Lamp2"]
+position = Vector2(589.6522, 105.66385)
+scale = Vector2(1.0587361, 1.2937758)
+texture = ExtResource("5_fos0i")
+offset = Vector2(23.613037, -63.402412)
+
+[node name="Lamp2" type="Sprite2D" parent="TileMapLayer/Lamp/Lamp2/Lamp2/Lamp2"]
+position = Vector2(663.6245, -64.846535)
+scale = Vector2(0.91879135, 1.1182114)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp2" type="Sprite2D" parent="TileMapLayer/Lamp/Lamp2/Lamp2/Lamp2/Lamp2"]
+position = Vector2(503.34497, -45.798256)
+scale = Vector2(0.91879135, 1.1182114)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp3" type="Sprite2D" parent="TileMapLayer/Lamp"]
+position = Vector2(-897.6217, 4.023533)
+scale = Vector2(0.7300245, 0.74561405)
+texture = ExtResource("5_fos0i")
+
+[node name="Lamp" type="Sprite2D" parent="TileMapLayer/Lamp/Lamp3"]
+position = Vector2(-590.9463, -86.3402)
+scale = Vector2(1.581041, 1.2242948)
+texture = ExtResource("5_fos0i")
+
+[node name="ShopAnim" type="Sprite2D" parent="TileMapLayer/Lamp"]
+position = Vector2(3064.5942, -63.035294)
+scale = Vector2(0.59482366, 0.8801471)
+texture = ExtResource("5_wkp8b")
+
 [node name="Player 2" parent="." instance=ExtResource("2_r0du0")]
 z_index = 8
 position = Vector2(-24, -16)
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(71.75, -18.75)
+scale = Vector2(0.8043478, 0.74561405)
+texture = ExtResource("5_fos0i")
+
+[node name="Rock1" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(-318.00003, -9)
+scale = Vector2(1.9499997, 1.9090909)
+texture = ExtResource("7_20pc6")
+
+[node name="Rock1" type="Sprite2D" parent="Rock1"]
+z_index = 15
+position = Vector2(-419.48724, -24.619045)
+scale = Vector2(1.4871782, 1.1298702)
+texture = ExtResource("7_20pc6")
+
+[node name="Rock2" type="Sprite2D" parent="Rock1"]
+z_index = 15
+position = Vector2(-203.07693, -9.428571)
+scale = Vector2(1.2570515, 0.95454526)
+texture = ExtResource("7_20pc6")
+
+[node name="Rock2" type="Sprite2D" parent="Rock1/Rock2"]
+z_index = 15
+position = Vector2(548.2917, -4.3900223)
+scale = Vector2(1.4871782, 1.1298702)
+texture = ExtResource("7_20pc6")
+
+[node name="Rock3" type="Sprite2D" parent="Rock1/Rock2"]
+position = Vector2(807.7511, -3.2925186)
+texture = ExtResource("8_5vvyt")
+
+[node name="Shop" type="Sprite2D" parent="Rock1/Rock2"]
+position = Vector2(882.407, -21.401363)
+scale = Vector2(0.33750942, 0.49440044)
+texture = ExtResource("9_c6i3y")
+
+[node name="Shop" type="Sprite2D" parent="."]
+z_index = 12
+position = Vector2(-147, -47)
+scale = Vector2(0.65254235, 0.75510204)
+texture = ExtResource("9_c6i3y")
+
+[node name="Sign" type="Sprite2D" parent="."]
+z_index = 21
+position = Vector2(2054, -63)
+scale = Vector2(1.7727273, 2.6612904)
+texture = ExtResource("10_c2ibq")
+
+[node name="Sign2" type="Sprite2D" parent="."]
+z_index = 16
+position = Vector2(1112, -88)
+scale = Vector2(2.5454545, 2.6451612)
+texture = ExtResource("10_c2ibq")
+
+[node name="Sign3" type="Sprite2D" parent="."]
+z_index = 15
+position = Vector2(-241.5, -44.500004)
+scale = Vector2(2.1363637, 3.1290321)
+texture = ExtResource("10_c2ibq")
