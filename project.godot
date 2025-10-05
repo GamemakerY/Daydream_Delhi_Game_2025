@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="Daydream_Game_2025"
+run/main_scene="uid://hteo22kjuqu8"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/mode=2
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 
