@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brkok02j3mqlp"]
+
+[ext_resource type="Texture2D" uid="uid://dbn5fsmf3cj56" path="res://assets/oak_woods_v1.0/decorations/platforms.png" id="1_im8h0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot784"]
+size = Vector2(31, 8)
+
+[node name="platforms" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_im8h0")
+region_enabled = true
+region_rect = Rect2(17, 17, 29.682072, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ot784")
