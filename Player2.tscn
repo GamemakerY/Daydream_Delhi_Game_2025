@@ -155,9 +155,11 @@ radius = 7.071068
 script = ExtResource("1_6qrfi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 12
 sprite_frames = SubResource("SpriteFrames_gudeb")
 animation = &"Idle"
 autoplay = "Idle"
+frame_progress = 0.745922
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, -1)
