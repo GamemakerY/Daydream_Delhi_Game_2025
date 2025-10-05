@@ -7,7 +7,12 @@ const JUMP_VELOCITY = -300.0
 
 func _physics_process(delta: float) -> void:
 	
-	
+	# Assume camera_pos and view are defined for the camera bounds
+	var camera_pos = get_viewport().get_camera_2d().global_position
+	var view_size = get_viewport_rect().size / 2 # Half size for clamping
+		# Calculate character's new position
+
+		# Clamp the character's position to the camera bounds
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -37,5 +42,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	var min_x = camera_pos.x - view_size.x
+	var max_x = camera_pos.x + view_size.x
+	var min_y = camera_pos.y - view_size.y
+	var max_y = camera_pos.y + view_size.y
+	
+	global_position.x = clamp(global_position.x, min_x, max_x)
+	global_position.y = clamp(global_position.y, min_y, max_y)
 
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://hteo22kjuqu8"]
+[gd_scene load_steps=14 format=4 uid="uid://hteo22kjuqu8"]
 
 [ext_resource type="PackedScene" uid="uid://i4mywafiek0" path="res://Player.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://dnm6cveunm4un" path="res://Player2.tscn" id="2_r0du0"]
@@ -115,6 +115,9 @@ _data = {
 &"move_platform": SubResource("Animation_lgr22")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm0pq"]
+size = Vector2(1, 130)
+
 [node name="main" type="Node2D"]
 
 [node name="TileMap" type="Node2D" parent="."]
@@ -160,12 +163,22 @@ libraries = {
 autoplay = "move_platform"
 
 [node name="Player" parent="TileMapLayer" instance=ExtResource("1_uu6xs")]
-position = Vector2(36, -1)
+position = Vector2(36, -15)
 
 [node name="Camera2D" type="Camera2D" parent="TileMapLayer/Player"]
 position = Vector2(19, -13)
 zoom = Vector2(5, 5)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer/Player/Camera2D"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/Player/Camera2D/StaticBody2D"]
+position = Vector2(115, 1)
+shape = SubResource("RectangleShape2D_cm0pq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapLayer/Player/Camera2D/StaticBody2D"]
+position = Vector2(-116, 0)
+shape = SubResource("RectangleShape2D_cm0pq")
+
 [node name="Player 2" parent="." instance=ExtResource("2_r0du0")]
 z_index = 8
-position = Vector2(-24, -16)
+position = Vector2(-27, -13)
